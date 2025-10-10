@@ -17,9 +17,7 @@ from jwt.exceptions import InvalidTokenError
 from config import settings
 
 
-# SECRET_KEY = "41ZT2fwi2qxpt92wSmqfzDjfxeRo8AVFiJQxVB_9Z2I"
-# ALGORITHM = 'HS256'
-# ACCESS_TOKEN_EXPIRE_MINUTES = 60
+
 SECRET_KEY = settings.secret_key
 ALGORITHM = settings.algorithm
 ACCESS_TOKEN_EXPIRE_MINUTES = settings.access_token_expire_minutes
@@ -95,8 +93,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], sessio
     
 
 
-# async def get_current_active_user(current_user: Annotated[User, Depends(get_current_user)]):
-#     pass
+
 
 
 router = APIRouter(
