@@ -1,8 +1,13 @@
+# import sys
+# print(sys.path)
+from pathlib import Path
+ROOT_PATH = Path(__file__).resolve().parent.parent
+# sys.path.insert(0,str(ROOT_PATH))
+# print(sys.path)
 from fastapi import FastAPI
 # from database import create_db_and_tables
 from fastapi.middleware.cors import CORSMiddleware
 from routers import post, user, auth, vote
-
 
 
 app = FastAPI()

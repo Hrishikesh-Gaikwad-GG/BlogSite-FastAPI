@@ -1,7 +1,56 @@
-__pychache__
+# Python
+__pycache__
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Environment variables
 .env
-app\temp.py
-app\tem.py
-app\sec.py
-app\main_prev.pygit 
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+app/database.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Temporary files
+app/temp.py
+app/tem.py
+app/sec.py
+app/main_prev.py
+
+# Node.js / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Alembic
+*.pyc
+alembic/versions/__pycache__/

@@ -31,6 +31,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = settings.access_token_expire_minutes
 pwd_context = CryptContext(schemes = ["bcrypt"], deprecated = 'auto')
 
 def verify_password(plain_password, hashed_password):
+    print(pwd_context.verify(plain_password, hashed_password))
     return pwd_context.verify(plain_password, hashed_password)
 
 def get_password_hash(password):
@@ -47,6 +48,7 @@ def authenticate_user(email_id: str, password, session : SessionDep):
     user = get_user_with_email(email_id , session)
     if not user:
         False
+    print(user)
     if not verify_password(password, user.password):
         return False
     return user
@@ -71,6 +73,7 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl = "token")
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], session : SessionDep):
+
     credentials_exceptions = HTTPException(
         status_code= status.HTTP_401_UNAUTHORIZED,
         detail= "Could not validate credentials, Please login again.",
@@ -103,7 +106,7 @@ router = APIRouter(
 
 @router.post("/token", response_model= schemas.Token)
 async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], session : SessionDep):
-
+    print(form_data.username, form_data.password)
     user = authenticate_user(form_data.username, form_data.password, session)
     if not user:
         raise HTTPException(
@@ -116,7 +119,7 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
     access_token = create_access_token(
         data = {"sub": user.email}, expires_delta = access_token_expires
     )
-
+    print('acto ', access_token)
     return {"access_token" : access_token, "token_type" : "bearer"}
 
 @router.get("/debug/token")
