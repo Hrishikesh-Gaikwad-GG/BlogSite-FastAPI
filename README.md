@@ -18,7 +18,7 @@ A modern, full-stack blog application built with FastAPI backend and React front
 ## 📸 Screenshots
 
 ### Landing Page
-![Landing Page](screenshots\landing_page.png)
+![Landing Page](screenshots/landing_page.png)
 
 ### Authentication
 
@@ -28,7 +28,7 @@ A modern, full-stack blog application built with FastAPI backend and React front
 *Secure JWT-based authentication*
 
 ### Home Page
-![Home Page](screenshots\homepage.png)
+![Home Page](screenshots/homepage.png)
 *Browse and search through blog posts with voting functionality*
 
 ### Post Detail
