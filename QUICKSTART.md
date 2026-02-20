@@ -35,11 +35,6 @@ cd ..
 
 ## Running the Application
 
-### Option 1: Use the startup script (Windows)
-Simply double-click `start-dev.bat` in the project root folder.
-
-### Option 2: Manual start
-
 **Terminal 1 - Backend:**
 ```bash
 venv\Scripts\activate

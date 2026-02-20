@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
+import Landing from './pages/Landing'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
@@ -41,9 +42,16 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        <Navbar isAuthenticated={isAuthenticated} user={user} onLogout={handleLogout} />
+        
         <Routes>
-          <Route path="/" element={<Home isAuthenticated={isAuthenticated} />} />
+          {/* Landing page for non-authenticated users */}
+          <Route 
+            path="/" 
+            element={isAuthenticated ? <><Navbar isAuthenticated={isAuthenticated} user={user} onLogout={handleLogout} /><Home isAuthenticated={isAuthenticated} /></> : <Landing />} 
+          />
+
+          {/* <Route path="/" element={<Home isAuthenticated={isAuthenticated} />} /> */}
+          
           <Route 
             path="/login" 
             element={isAuthenticated ? <Navigate to="/" /> : <Login onLogin={handleLogin} />} 
