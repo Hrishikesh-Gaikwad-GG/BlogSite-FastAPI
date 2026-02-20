@@ -147,7 +147,7 @@ function Landing() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-            <p>&copy; 2024 BlogSite. All rights reserved.</p>
+            <p>&copy; 2025 BlogSite. All rights reserved.</p>
           </div>
         </div>
       </footer>

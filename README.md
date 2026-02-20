@@ -17,25 +17,36 @@ A modern, full-stack blog application built with FastAPI backend and React front
 
 ## 📸 Screenshots
 
+### Landing Page
+![Landing Page](screenshots\landing_page.png)
+
+### Authentication
+
+![Register](screenshots/register.png)
+
+![Login](screenshots/login.png)
+*Secure JWT-based authentication*
+
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](screenshots\homepage.png)
 *Browse and search through blog posts with voting functionality*
 
 ### Post Detail
-![Post Detail](screenshots/post-detail.png)
+![Post Detail](screenshots/post.png)
 *Read full posts and interact with voting system*
 
 ### Create Post
-![Create Post](screenshots/create-post.png)
+![Create Post](screenshots/create_post.png)
 *Write and publish your own blog posts*
 
 ### My Posts Dashboard
 ![My Posts](screenshots/my-posts.png)
 *Manage all your posts in one place*
 
-### Authentication
-![Login](screenshots/login.png)
-*Secure JWT-based authentication*
+### Search
+![My Posts](screenshots/search.png)
+*Search blog with the title*
+
 
 ---
 
@@ -70,8 +81,8 @@ A modern, full-stack blog application built with FastAPI backend and React front
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/blogsite-fullstack.git
-   cd blogsite-fullstack
+   git clone https://github.com/Hrishikesh-Gaikwad-GG/BlogSite-FastAPI.git
+   cd blogsite-fastapi
    ```
 
 2. **Set up the backend**
@@ -275,33 +286,13 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 ---
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YOUR_USERNAME/blogsite-fullstack/issues).
-
----
-
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+**Hrishikesh Gaikwad**
+- GitHub: [Hrishikesh-Gaikwad-GG](https://github.com/Hrishikesh-Gaikwad-GG)
 
 ---
 
-## 🙏 Acknowledgments
-
-- FastAPI documentation
-- React documentation
-- Tailwind CSS
-- PostgreSQL community
-
----
 
 <div align="center">
 
